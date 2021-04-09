@@ -1,0 +1,431 @@
+﻿/*Подключение шрифта с googleapis */
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,600&subset=latin,cyrillic);
+
+/*СТРАНИЦА- StructuredResume*/
+/*Стили для структурированных блоков с резюме*/
+
+/* стиль для структурированного резюме */
+div.structured_resume {
+    border-bottom: 1px solid rgb(149, 163, 160);
+    padding: 2px 2px;
+}
+/* стиль для ссылки на резюме */
+.link_to_full_vacancy a {
+    font-weight: bold;
+    color: rgb(16, 32, 84);
+}
+/* стиль города проживания */
+.city_of_residence {
+    font-weight: bold;
+}
+/* стиль для информации о себе и опыта работы*/
+.joob_seeker_about, .salary_and_work_expirience {
+    font-family: serif;
+    font-style: italic;
+}
+/* стиль для текста который должен быть подчёркнут*/
+.underline_text {
+    text-decoration: underline;
+}
+/*внешние отступы снизу для полей структурированного резюме*/
+.link_to_full_vacancy, .city_of_residence, .joob_seeker_about, .salary_and_work_expirience, .structured_resume {
+    margin-bottom: 10px
+}
+
+/*СТРАНИЦА- Index*/
+/*модальное окно*/
+.modal, .modal_authtorization_joobseeker, .modal_authtorization_employer {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(109, 201, 101,0.5);
+}
+/*модальное окно*/
+.modal_window {
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgb(203, 210, 212);
+    border: 2px solid rgb(196,206,207);
+    border-radius: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 250px;
+    height: 180px;
+}
+
+.form_header_title {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.form_header_сlose_element {
+    font-weight: bold;
+    font-size: 20px;
+    cursor: default;
+}
+
+.form_header {
+    position: relative;
+}
+
+.form_header_сlose_element {
+    position: absolute;
+    right: 1px;
+}
+
+form.modal_form {
+    width: 264px;
+}
+
+input.login {
+    width: 230px;
+}
+
+input.password {
+    width: 230px;
+}
+
+#submit {
+    width: 60px;
+    background-color: rgb(70,97,232);
+    color: white;
+}
+
+div.dropdown {
+    max-width: 100px;
+    position: relative;
+}
+
+
+
+/*авторизация и аутенфикация*/
+/*cтили для контейнера где будет содержаться Логин Соискателя/Работодателя и кнопка "Выйти" для выхода пользователя из системы*/
+.login_info {
+    position: absolute;
+    top: -60px;
+    min-width: 200px;
+    max-width: 100px;
+    max-height: 70px;
+    min-height: 20px;
+    border: 0.5px solid black;
+    background-color: rgb(106, 190, 158);
+    right: 20px;
+}
+/*стили для поля в котором отображается Login Соискателя/Работодателя*/
+#Login_text {
+    display: flex;
+    justify-content: center;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    border: 0.5px solid black;
+    border-radius: 3px;
+    background-color: rgb(255, 255, 255);
+    color: black;
+}
+/*контейнер для ссылки-кнопки*/
+#log_off {
+    margin-bottom: 4px;
+}
+/*ссылка-кнопка*/
+.log_off {
+    border: 0.5px solid black;
+    background-color: rgb(70,97,232);
+    border-radius: 3px;
+    margin-bottom: 4px;
+    margin-left: 2px;
+    padding: 0px 7px 1.5px 7px;
+    text-decoration: none;
+    color: white;
+}
+
+.authentication_and_authtorization {
+    width: 180px;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+}
+
+div .authtorization_buton, div .authentication_buton {
+    display: inline;
+    border: 0.5px solid black;
+    border-radius: 3px;
+    padding: 0px 7px 1.5px 7px;
+    background-color: rgb(70,97,232);
+    color: white;
+    cursor: default;
+}
+
+.dropdown {
+    display: inline-block;
+    position: relative;
+    width: 100px;
+    height: 50px;
+}
+
+.dropdown_menu {
+    display: none;
+    position: absolute;
+    left: 0px;
+    top: 22px;
+    width: 88px;
+    border: 0.5px solid black;
+    border-radius: 3px;
+    padding: 0px 7px 1.5px 7px;
+    background-color: rgb(70,97,232);
+    color: white;
+    cursor: default;
+}
+
+.submenu {
+    padding-left: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+.dropdown:hover .dropdown_menu {
+    display: block;
+}
+
+.submenu > li > a {
+    display: block;
+    padding: 1px 1px;
+    color: white;
+    text-decoration: none;
+}
+
+    .submenu > li > a:hover {
+        background-color: black;
+    }
+
+/* РЕГИСТРАЦИЯ СОИСКАТЕЛЯ и РАБОТОДАТЕЛЯ*/
+/* окно авторизации соискателя и работодеателя*/
+#modal_authtorization_window {
+    position: fixed;
+    top: 15%;
+    padding: 0;
+    width: 360px;
+    height: 290px;
+    position: absolute;
+    right: 37%;
+    border: 2px solid rgb(196,206,207);
+    background-color: rgb(203, 210, 212);
+}
+/*заголовококна авторизации соискателя и работодателя*/
+#modal_authtorization_window_header {
+    min-height: 30px;
+}
+/*титульная надпись в заголовке авторизации соискателя и работодателя */
+#header_title {
+    margin-left: 5px;
+    display: inline-block;
+    position: absolute;
+    font-size: 24px;
+}
+/* элемент закрытия в заголовке авторизации соискателя и работодателя*/
+#header_сlose_element_jobseeker, #header_сlose_element_employer {
+    display: inline-block;
+    position: absolute;
+    top: 1%;
+    right: 1%;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: default;
+}
+/*форма регистрации CОИСКАТЕЛЯ*/
+p#last_name, p#first_name, p#mail, p#password {
+    padding-bottom: 5px;
+    min-width: 360px;
+    height: 40px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid rgb(247, 255, 254);
+}
+
+input#joobseeker_last_name, input#joobseeker_first_name, input#joobseeker_mail {
+    width: 250px;
+    margin-left: 20px;
+}
+
+input#joobseeker_password {
+    width: 250px;
+    margin-left: 18px;
+}
+
+label#joobseeker_last_name {
+    font-weight: bold;
+    margin-left: 5px;
+}
+
+label#joobseeker_first_name {
+    font-weight: bold;
+    margin-left: 42px;
+}
+
+label#joobseeker_mail {
+    font-weight: bold;
+    margin-left: 32px;
+}
+
+label#joobseeker_password {
+    font-weight: bold;
+    margin-left: 20px;
+}
+
+#authtorization_joobseeker_submit {
+    width: 100px;
+    background-color: rgb(70,97,232);
+    color: white;
+    position: absolute;
+    right: 5px;
+}
+
+/*форма регистрации Работодателя*/
+p#employer_name, p#employer_INN, p#employer_mail, p#employer_password {
+    padding-bottom: 5px;
+    min-width: 360px;
+    height: 40px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid rgb(247, 255, 254);
+}
+
+input#employer_name {
+    width: 250px;
+    margin-left: 17px;
+}
+
+input#employer_INN {
+    width: 250px;
+    margin-left: 15px;
+}
+
+input#employer_mail {
+    width: 250px;
+    margin-left: 18px;
+}
+
+input#employer_password {
+    width: 250px;
+    margin-left: 16.5px;
+}
+
+label#employer_name {
+    font-weight: bold;
+    margin-left: 8px;
+}
+
+label#employer_INN {
+    font-weight: bold;
+    margin-left: 41px;
+}
+
+label#employer_mail {
+    font-weight: bold;
+    margin-left: 35px;
+}
+
+label#employer_password {
+    font-weight: bold;
+    margin-left: 22px;
+}
+
+#authtorization_employer_submit {
+    width: 100px;
+    background-color: rgb(70,97,232);
+    color: white;
+    position: absolute;
+    right: 5px;
+}
+/*строка ошибки полей формы*/
+.last_name_validate_string, .first_name_validate_string, .mail_validate_string, .password_validate_string {
+    position: absolute;
+    left: 27%;
+    color: red;
+}
+/*строка ошибки кнопки регистрация*/
+.submit_validate_string {
+    position: absolute;
+    left: 2%;
+    color: red;
+}
+/*СТИЛИ ДЛЯ МЕНЮ НАВИГАЦИИ ПО САЙТУ*/
+/**/
+nav {
+    font-family: 'Open Sans', sans-serif;
+    background-color: rgb(70,97,232);
+    max-width: 642px;
+    position: absolute;
+    right: 25%;
+    top: 2%;
+}
+
+    nav ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+        nav ul:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+    nav a {
+        text-decoration: none;
+        display: block;
+        transition: .3s linear;
+    }
+
+.top_menu > li {
+    float: left;
+    position: relative;
+    border-left: 1px solid black;
+}
+.top_menu > li:first-child {
+    border-left: 0;
+}
+.top_menu > li > a {
+    padding: 20px 30px;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: white;
+    letter-spacing: 2px;
+ }
+
+.sub_menu > li > a {
+    color: white;
+}
+
+.top_menu > li > a:hover, .sub_menu a:hover {
+    color: rgb(75, 78, 80);
+}
+
+.sub_menu {
+    position: absolute;
+    z-index: 5;
+    min-width: 215px;
+    background: rgb(70,97,232);
+    border-top: 1px solid #CBCBCC;
+    border-left: 1px solid #CBCBCC;
+    border-right: 1px solid #CBCBCC;
+    visibility: hidden;
+    opacity: 0;
+    transform-origin: 0% 0%;
+    transform: rotateX(-90deg);
+    transition: .3s linear;
+}
+
+nav li:hover > .sub_menu {
+    transform: rotateX(0deg);
+    visibility: visible;
+    opacity: 1;
+}

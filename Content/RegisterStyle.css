@@ -1,0 +1,158 @@
+﻿
+    /*форма регистрации CОИСКАТЕЛЯ*/
+#modal_authtorization_window {
+    position: fixed;
+    top: 20%;
+    padding: 0;
+    width: 370px;
+    height: 300px;
+    position: absolute;
+    right: 35%;
+    border: 4px solid rgb(196,206,207);
+    background-color: rgb(196,206,207);
+}
+/*заголовок окна авторизации соискателя и работодателя*/
+#modal_authtorization_window_header {
+    min-height: 30px;
+}
+/*титульная надпись в заголовке авторизации соискателя и работодателя */
+#header_title {
+    margin-left: 5px;
+    display: inline-block;
+    position: absolute;
+    font-size: 24px;
+}
+
+p#last_name, p#first_name, p#mail, p#password {
+    padding-bottom: 5px;
+    min-width: 360px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid rgb(247, 255, 254);
+}
+
+input#joobseeker_last_name, input#joobseeker_first_name, input#joobseeker_mail {
+    width: 250px;
+    margin-left: 20px;
+}
+
+input#joobseeker_password {
+    width: 250px;
+    margin-left: 18px;
+}
+
+label#joobseeker_last_name {
+    font-weight: bold;
+    margin-left: 5px;
+}
+
+label#joobseeker_first_name {
+    font-weight: bold;
+    margin-left: 42px;
+}
+
+label#joobseeker_mail {
+    font-weight: bold;
+    margin-left: 32px;
+}
+
+label#joobseeker_password {
+    font-weight: bold;
+    margin-left: 20px;
+}
+
+#authtorization_joobseeker_submit {
+    width: 100px;
+    background-color: rgb(70,97,232);
+    color: white;
+    position: absolute;
+    right: 5px;
+}
+
+/*форма регистрации Работодателя*/
+p#employer_name, p#employer_INN, p#employer_mail, p#employer_password {
+    padding-bottom: 5px;
+    min-width: 360px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid rgb(247, 255, 254);
+}
+
+input#employer_name {
+    width: 250px;
+    margin-left: 17px;
+}
+
+input#employer_INN {
+    width: 250px;
+    margin-left: 15px;
+}
+
+input#employer_mail {
+    width: 250px;
+    margin-left: 18px;
+    ;
+}
+
+input#employer_password {
+    width: 250px;
+    margin-left: 16.5px;
+}
+
+label#employer_name {
+    font-weight: bold;
+    margin-left: 8px;
+}
+
+label#employer_INN {
+    font-weight: bold;
+    margin-left: 41px;
+}
+
+label#employer_mail {
+    font-weight: bold;
+    margin-left: 35px;
+}
+
+label#employer_password {
+    font-weight: bold;
+    margin-left: 22px;
+}
+
+#authtorization_employer_submit {
+    width: 100px;
+    background-color: rgb(70,97,232);
+    color: white;
+    position: absolute;
+    right: 5px;
+}
+
+
+/*стили для сообщений валидации со стороны сервера*/
+
+#server_validation_string{
+position:relative;
+left:26%;
+
+}
+.field-validation-error {
+    color: blue;
+}
+
+.field-validation-valid {
+    display: none;
+}
+
+.input-validation-error {
+    border: 1px solid #f00;
+    background-color: #f00;
+}
+
+.validation-summary-errors {
+    font-weight: bold;
+    color: #f00;
+}
+
+.validation-summary-valid {
+    display: none;
+}

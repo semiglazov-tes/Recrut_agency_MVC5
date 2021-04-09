@@ -1,0 +1,30 @@
+﻿@model WebApplication1.Models.JobSeekerRegistration
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "Регистрация соискателя";
+}
+    <div id="modal_authtorization_window">
+        <div id="modal_authtorization_window_header">
+            <div id="header_title">Регистрация соискателя</div>
+        </div>
+        <form id="authtorization_joobseeker_form" action="/JobSeekerAccount/Register" method="post">
+            @Html.ValidationSummary(true)
+            <p id="last_name">
+                <label id="joobseeker_last_name" for="joobseeker_last_name">Фамилия</label>
+                <input id="joobseeker_last_name" type="text" name="LastName"><br><span id="server_validation_string">@Html.ValidationMessageFor(model => model.LastName) </span>
+            </p>
+            <p id="first_name">
+                <label id="joobseeker_first_name" for="joobseeker_first_name">Имя</label>
+                <input id="joobseeker_first_name" type="text" name="FirstName"><br><span id="server_validation_string">@Html.ValidationMessageFor(model => model.FirstName) </span>
+            </p>
+            <p id="mail">
+                <label id="joobseeker_mail" for="joobseeker_mail">Email</label>
+                <input id="joobseeker_mail" type="email" name="Email"><br><span id="server_validation_string">@Html.ValidationMessageFor(model => model.Email) </span>
+            </p>
+            <p id="password">
+                <label id="joobseeker_password" for="joobseeker_password">Пароль</label>
+                <input id="joobseeker_password" type="password" name="Password"><br><span id="server_validation_string">@Html.ValidationMessageFor(model => model.Password) </span>
+            </p>
+            <input id="authtorization_joobseeker_submit" class="submit" type="submit" value="Регистрация">
+        </form>
+    </div>

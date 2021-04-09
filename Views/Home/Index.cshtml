@@ -1,0 +1,99 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "Главная";
+}
+    <div class="authentication_and_authtorization">
+        <div class="authentication_buton">Вход</div>
+        <span>&nbsp    &#448 &nbsp </span>
+        <div class="dropdown">
+        <div class="authtorization_buton">Регистрация</div>
+            <div class="dropdown_menu">
+                <ul class="submenu">
+                    <li id="jobseeker"><a href="" onclick="return false">Соискатель</a></li>
+                    <li id="employer"><a href="" onclick="return false">Работодатель</a></li>
+                </ul>
+             </div>
+        </div>
+    </div>
+    <div class="modal">
+        <div class="modal_window">
+            <form class="modal_form" action="/JobSeekerAccount/Login" method="post">
+                <div class="form_header">
+                    <span class="form_header_title">Вход на сайт</span>
+                    <span class="form_header_сlose_element">&times</span>
+                </div>
+                <p>
+                    <strong>Email</strong><br>
+                    <input class="login" type="text" name="login">
+                </p>
+                <p>
+                    <strong>Пароль</strong><br>
+                    <input class="password" type="password" name="password">
+                </p>
+                <input id="submit" class="submit" type="submit" value="Войти">
+            </form>
+        </div>
+    </div>
+    <div class="modal_authtorization_joobseeker">
+        <div id="modal_authtorization_window">
+            <div id="modal_authtorization_window_header">
+                <div id="header_title">Регистрация соискателя</div>
+                <div id="header_сlose_element_jobseeker">&times</div>
+            </div>
+            <form id="authtorization_joobseeker_form" name="joobseeker_form" action="/JobSeekerAccount/Register" method="post">
+                <p id="last_name">
+                    <label id="joobseeker_last_name" for="joobseeker_last_name">Фамилия</label>
+                    <input id="joobseeker_last_name" type="text" name="LastName"><br>
+                    <span class="last_name_validate_string" name="last_name_validate_string"></span>
+                </p>
+                <p id="first_name">
+                    <label id="joobseeker_first_name" for="joobseeker_first_name">Имя</label>
+                    <input id="joobseeker_first_name" type="text" name="FirstName"><br>
+                    <span class="first_name_validate_string" name="first_name_validate_string"></span>
+                </p>
+                <p id="mail">
+                    <label id="joobseeker_mail" for="joobseeker_mail">Email</label>
+                    <input id="joobseeker_mail" type="email" name="Email"><br>
+                    <span class="mail_validate_string" name="mail_validate_string"></span>
+                </p>
+                <p id="password">
+                    <label id="joobseeker_password" for="joobseeker_password">Пароль</label>
+                    <input id="joobseeker_password" type="password" name="Password"><br>
+                    <span class="password_validate_string" name="password_validate_string"></span>
+                </p>
+                <p>
+                    <span class="submit_validate_string"></span>
+                    <input id="authtorization_joobseeker_submit" class="submit" type="submit" value="Регистрация">
+                </p>
+
+            </form>
+        </div>
+    </div>
+
+    <div class="modal_authtorization_employer">
+        <div id="modal_authtorization_window">
+            <div id="modal_authtorization_window_header">
+                <div id="header_title">Регистрация работодателя</div>
+                <div id="header_сlose_element_employer">&times</div>
+            </div>
+            <form id="authtorization_employer_form">
+                <p id="employer_name">
+                    <label id="employer_name" for="employer_name">Название</label>
+                    <input id="employer_name" type="text" name="employer_name">
+                </p>
+                <p id="employer_INN">
+                    <label id="employer_INN" for="employer_INN">ИНН</label>
+                    <input id="employer_INN" type="text" name="employer_INN">
+                </p>
+                <p id="employer_mail">
+                    <label id="employer_mail" for="employer_mail">Email</label>
+                    <input id="employer_mail" type="email" name="employer_mail">
+                </p>
+                <p id="employer_password">
+                    <label id="employer_password" for="employer_password">Пароль</label>
+                    <input id="employer_password" type="password" name="employer_password">
+                </p>
+                <input id="authtorization_employer_submit" class="submit" type="submit" value="Регистрация">
+            </form>
+        </div>
+    </div>
